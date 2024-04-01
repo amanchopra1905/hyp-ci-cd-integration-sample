@@ -1,11 +1,4 @@
 version: 2.1
-parameters:
-  username:
-    type: string
-    default: "USERNAME"
-  access_key:
-    type: string
-    default: "ACCESS_KEY"
 jobs:
   test-java:
     docker:
@@ -20,7 +13,7 @@ jobs:
           command: chmod u+x hyperexecute
       - run:
           name: "Runner Command"
-          command: ./hyperexecute --user << pipeline.parameters.username >> --key << pipeline.parameters.access_key >> --config yaml/autosplit_linux.yaml
+          command: ./hyperexecute --config yaml/autosplit_linux.yaml
 workflows:
   build-and-test:
     jobs:
