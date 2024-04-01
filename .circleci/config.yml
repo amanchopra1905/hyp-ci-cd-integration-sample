@@ -20,7 +20,7 @@ jobs:
           command: chmod u+x hyperexecute
       - run:
           name: "Runner Command"
-          command: ./hyperexecute --user pipeline.parameters.username --key pipeline.parameters.access_key --config yaml/autosplit_linux.yaml
+          command: ./hyperexecute --user << pipeline.parameters.username >> --key << pipeline.parameters.access_key >> --config yaml/autosplit_linux.yaml
 workflows:
   build-and-test:
     jobs:
