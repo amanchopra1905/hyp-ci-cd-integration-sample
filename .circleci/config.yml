@@ -6,15 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Setting username as ENV"
-          command: export LT_USERNAME="amanc" #use set command for windows
-      - run:
-          name: "Print env"
-          command: printenv LT_USERNAME #use set command for windows
-      - run:
-          name: "Setting Accesskey as ENV"
-          command: export LT_ACCESS_KEY="pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a"  #use set command for windows
-      - run:
           name: "Download HE CLI"
           command: wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
       - run:
@@ -22,7 +13,7 @@ jobs:
           command: chmod u+x hyperexecute
       - run:
           name: "Runner Command"
-          command: ./hyperexecute --config yaml/autosplit_linux.yaml
+          command: ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config yaml/autosplit_linux.yaml
 workflows:
   build-and-test:
     jobs:
