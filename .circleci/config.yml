@@ -9,6 +9,9 @@ jobs:
           name: "Setting username as ENV"
           command: export LT_USERNAME="amanc" #use set command for windows
       - run:
+          name: "Print env"
+          command: printenv LT_USERNAME #use set command for windows
+      - run:
           name: "Setting Accesskey as ENV"
           command: export LT_ACCESS_KEY="pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a"  #use set command for windows
       - run:
