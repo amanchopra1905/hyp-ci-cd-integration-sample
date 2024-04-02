@@ -1,2 +1,2 @@
 # CI/CD Integration Sample Repository
-This repository deals with all the CI/CD Integrations with HyperExecute
+This repository deals with the GitLab Integrations with HyperExecute
