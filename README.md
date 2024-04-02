@@ -10,6 +10,7 @@ Read this [documentation](https://www.lambdatest.com/support/docs/github-actions
 Path -> .github/workflows/main.yml
 ## 4. GitLab
 ## 5. CircleCI
+Read this [documentation](https://www.lambdatest.com/support/docs/circle-ci-with-hyperexecute/) to understand how to integrate the GitHub Actions Pipeline with HyperExecute. <br />
 ## 6. Jenkins
 ## 7. Bitbucket
 ## 8. Travis CI
