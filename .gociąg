@@ -1,0 +1,19 @@
+<pipeline name="Download-and-Run-Hyperexecute">
+  <stage name="Download">
+    <job name="Download-Hyperexecute">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute" />
+        <exec command="chmod u+x hyperexecute" />
+      </tasks>
+    </job>
+  </stage>
+  <stage name="Run-Tests">
+    <job name="Run-Hyperexecute-Tests">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>" />
+      </tasks>
+    </job>
+  </stage>
+</pipeline>
