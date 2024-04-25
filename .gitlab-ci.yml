@@ -20,4 +20,4 @@ pipelines:
       ## Run Hyperexecute tests (descriptive name)
       - name: Run Hyperexecute Tests
         script: |
-          ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file_path>
+          ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config yaml/autosplit_linux.yaml
