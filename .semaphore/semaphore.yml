@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - 'version: 1'
+            - 'version: 1.0'
             - 'image: ubuntu:latest  # Adjust for macOS if needed'
             - 'stages:'
             - '  - download  # Descriptive stage name'
