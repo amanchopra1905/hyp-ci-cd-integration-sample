@@ -25,7 +25,7 @@ cacheDirectories:
 
 pre:
   # Skip execution of the tests in the pre step
-  - mvn clean install
+  - mvn dependency:resolve
 
 post:
   - ls target/surefire-reports/
