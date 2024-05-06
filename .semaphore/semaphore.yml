@@ -1,16 +1,23 @@
-version: v1.0
-name: Initial Pipeline
-agent:
-  machine:
-    type: e1-standard-2
-    os_image: ubuntu2004
-blocks:
-  - name: 'Block #1'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands:
-            - cd ..
-            - 'wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute'
-            - chmod u+x ./hyperexecute
-            - ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config hyp.yaml
+version: 1
+
+image: ubuntu:latest  # Adjust for macOS if needed
+
+stages:
+  - download  # Descriptive stage name
+  - run-tests  # Descriptive stage name
+
+jobs:
+  download:  # Descriptive job name
+    stage: download
+    tasks:
+      - name: Download Hyperexecute CLI  # Descriptive task name
+        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+      - name: Make Hyperexecute executable  # Descriptive task name
+        command: chmod u+x hyperexecute
+
+  run-tests:  # Descriptive job name
+    stage: run-tests
+    depends_on: download  # Specify dependency on download job
+    tasks:
+      - name: Run Hyperexecute Tests  # Descriptive task name
+        command: ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config hyp.yaml
