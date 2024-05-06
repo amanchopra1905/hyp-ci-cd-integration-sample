@@ -13,4 +13,4 @@ blocks:
             - checkout
             - 'wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute'
             - chmod u+x hyperexecute
-            - ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config hyp.yaml
+            - ./hyperexecute --user amanc --key pyimrYgw2nNu717noPaaHKZrFK4l9XXixmm6U2YquuBHQtTQ0a --config yaml/autosplit_linux.yaml
